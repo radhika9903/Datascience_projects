@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("upcoming", {packages:["map"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name'],
+          [36.1626638, -86.7816016, 'Location=Nashville, TN,User=CharlotteAutry,Friendcount=5678,FollowerCount=5876'],
+          [36.778261, -119.4179324,  'Location=California,User=predatorhunting,Friendcount=7769,FollowerCount=7125'],
+          [41.8781136, -87.6297982,  'Location=Chicago,User=vmcmurray,Friendcount=9891,FollowerCount=9021'],
+          [51.5073509, -0.1277583,  'Location=London,User=LifeiseARTh,Friendcount=6466,FollowerCount=5986'],
+          [52.1306607, -3.7837117,  'Location=wales,User=seoproweb,Friendcount=7093,FollowerCount=7245'],
+          [51.253775, -85.3232139,  'Location=Ontario, Canada,User=i3eaconlight,Friendcount=5742,FollowerCount=6035'],
+          [47.1796487, -88.5292875,  'Location=Boston, MI, NC, San Francisco,User=PerkettPR,Friendcount=7332,FollowerCount=7867'],
+          [12.9715987, 77.5945627,  'Location=Bangalore,User=techmashup,Friendcount=6731,FollowerCount=6484'],
+          [42.9869502, -81.243177,  'Location=London, Ontario, Canada,User=ShoutMGB,Friendcount=9880,FollowerCount=10329'],
+          [53.7632254, -2.7044052,  'Location=Lancashire, UK,User=MaxYrPotential,Friendcount=7928,FollowerCount=7397'],
+          [40.8447819, -73.8648268,  'Location=Bronx, NYC,User=TopShelfTB,Friendcount=6733,FollowerCount=7546'],                                                    
+          [45.5016889, -73.567256,  'Location=Montreal, Canada,User=DanielKFoisy,Friendcount=24645,FollowerCount=23405'],
+          [46.0645809, -118.3430209,  'Location=Walla Walla, WA, USA,User=kalnok,Friendcount=5564,FollowerCount=5084'],
+          [47.6062095, -122.3320708,  'Location=Seattle, Washington, USA,User=seattlepi,Friendcount=8603,FollowerCount=12143'],
+          [34.187044, -118.3812562,  'Location=  North Hollywood Cali/ATL,User=MissUniqueOne21,Friendcount=15429,FollowerCount=14592'],
+          [-33.8688197, 151.2092955,  'Location=Sydney, Australia.,User=OnlyYouShawtyXP,Friendcount=13632,FollowerCount=13650'],
+          [37.566535, 126.9779692,  'Location=Seoul,User=ShesMD,Friendcount=119771,FollowerCount=114765'],
+          [45.5016889, -73.567256,  'Location=Montreal,User=Kiboomu,Friendcount=10008,FollowerCount=12387'],
+          [35.7795897, -78.6381787,  'Location=Raleigh, NC,User=1AmandaMichelle,Friendcount=11702,FollowerCount=15228'],
+          [31.9685988, -99.9018131,  'Location=Texas,User=Soldierjohn,Friendcount=5320,FollowerCount=5391'],
+          [36.8529263, -75.977985,  'Location=Virginia Beach VA,User=twit4causes,Friendcount=5614,FollowerCount=5374'],
+          [38.9071923, -77.0368707,  'Location=Washington D.C,User=CaptainBLUNTman,Friendcount=35144,FollowerCount=41026'],
+          [39.3209801, -111.0937311,  'Location=UTAH,User=inascents,Friendcount=21563,FollowerCount=20536'],
+          [33.4483771, -112.0740373,  'Location=Phoenix, AZ,User=MaxxFight,Friendcount=7228,FollowerCount=6596'],
+          [32.8140177, -96.9488945,  'Location=Irving, TX,User=OpenRoadLending,Friendcount=6379,FollowerCount=5164'],
+          [51.5073509, -0.1277583,  'Location=London,User=FilmLondon,Friendcount=8441,FollowerCount=8380'],
+          [38.6270025, -90.1994042,  'Location=St. Louis, MO,User=singlengorgeous,Friendcount=5597,FollowerCount=5731'],
+          [55.864237, -4.251806,  'Location=Glasgow, Scotland, UK, Europe,User=craigmcgill,Friendcount=5593,FollowerCount=5356'],
+          [41.003698, -76.4549457,  'Location=Bloomsburg, PA,User=IntntMrktng4Biz,Friendcount=5221,FollowerCount=5179'],
+          [40.7830603, -73.9712488,  'Location=Manhattan, NY,User=TheLottoPick,Friendcount=12723,FollowerCount=12452'],
+          [26.1224386, -80.1373174,  'Location=Ft Lauderdale,User=satelliteboss,Friendcount=6445,FollowerCount=5861'],
+          [38.6270025, -90.1994042,  'Location=St. Louis,User=Sheen300,Friendcount=40890,FollowerCount=44053'],
+          [36.1147074, -115.1728497,  'Location=Las Vegas,User=LasVegasSign,Friendcount=7626,FollowerCount=21389'],
+          [52.3555177, -1.1743197,  'Location=NW England & IOM,User=GranadaReports,Friendcount=10378,FollowerCount=10522'],
+          [34.0522342, -118.2436849,  'Location=Los Angeles,User=TheScenestar,Friendcount=7818,FollowerCount=9704'],
+          [40.6331249, -89.3985283,  'Location=Illinois,User=SweepTight,Friendcount=11625,FollowerCount=12735'],
+          [47.3223221, -122.3126222,  'Location=HQ in Federal Way, WA,User=WorldVisionUSA,Friendcount=14612,FollowerCount=20049'],
+          [35.7795897, -78.6381787,  'Location=Raleigh, NC,User=Urgo,Friendcount=32620,FollowerCount=44795'],
+          [34.0412085, -118.442596,  'Location=West LA,User=stephenkruiser,Friendcount=130375,FollowerCount=124849'],
+          [38.9071923, -77.0368707,  'Location=Washington DC , MD , VA , USA,User=shashib,Friendcount=13233,FollowerCount=13701'],
+          [36.1699412, -115.1398296,  'Location=Las Vegas, Nevada,User=TotalVegas,Friendcount=6079,FollowerCount=6149'],
+          [41.3850639, 2.1734035,  'Location=Barcelona, Catalonia.,User=stratfordangel,Friendcount=10783,FollowerCount=10375'],
+          [33.8333716, -111.9507042,  'Location=Cave Creek, AZ,User=AZGadsden,Friendcount=11013,FollowerCount=10312'],
+          [40.7127837, -74.0059413,  'Location=New York, USA,User=karenwbrown,Friendcount=15866,FollowerCount=15029'],
+          [28.228209, 112.938814,  'Location=Vienna, Hong Kong, Changsha,User=KonradiusI,Friendcount=5784,FollowerCount=5580'],
+          [33.5206608, -86.80249,  'Location=BIRMINGHAM!,User=Niallators,Friendcount=5405,FollowerCount=5960'],
+          [21.3069444, -157.8583333,  'Location=Honolulu, Hawaii,User=StarAdvertiser,Friendcount=5314,FollowerCount=6224'],
+          [27.6648274, -81.5157535,  'Location=South Florida,User=SunSentinel,Friendcount=7140,FollowerCount=13239'],
+          [42.3600825, -71.0588801,  'Location=Boston, MA,User=universalhub,Friendcount=6891,FollowerCount=7379'],
+          [38.1287243, -85.6083968,  'Location=JasmineVille,User=Jasmineator,Friendcount=7763,FollowerCount=7251'],
+          [53.4807593, -2.2426305,  'Location=Manchester, UK,User=TheAntiqueTrade,Friendcount=7764,FollowerCount=7208'],
+          [38.6270025, -90.1994042,  'Location=St. Louis, Mo,User=Tojosan,Friendcount=6477,FollowerCount=7952'],
+          [41.8781136, -87.6297982,  'Location=Chicago,User=Suntimes,Friendcount=14935,FollowerCount=26464'],
+          [34.1066756, -117.8067257,  'Location=San Dimas, CA,User=AmerHeroesRadio,Friendcount=7074,FollowerCount=6595'],
+          [36.1699412, -115.1398296,  'Location=Las Vegas, NV,User=brookedunne,Friendcount=9642,FollowerCount=9126'],
+          [55.378051, -3.435973,  'Location=United Kingdom.,User=JezzzyBieber,Friendcount=6776,FollowerCount=8307'],
+          [33.4483771, -112.0740373,  'Location=Phoenix,User=DrakeProfessor,Friendcount=9141,FollowerCount=8315'],
+        ]);
+
+        var map = new google.visualization.Map(document.getElementById('map_div'));
+        map.draw(data, {
+          showTooltip: true,
+          showInfoWindow: true
+        });
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div id="map_div" style="width: 1300px; height: 800px"></div>
+  </body>
+</html>
